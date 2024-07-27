@@ -1,0 +1,76 @@
+/*Importazione del font Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/*Stile applicato a tutti gli elementi*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Stile del corpo della pagina*/
+body {
+    overflow: hidden;
+}
+
+/*Stile di sezione*/
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #1d2b3a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Stile del box*/
+.box {
+    position: relative;
+    width: 400px;
+    height: 150px;
+    background: #fff;
+    border-radius: 20px;
+    filter: url(#gooey);
+}
+
+/*Stile dell'H2*/
+h2 {
+    position: absolute;
+    font-size: 6em;
+    color: #1d2b3a;
+    z-index: 100;
+}
+
+/*Stile dei drops*/
+.drops {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    aspect-ratio: 1/1;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1000;
+    animation: animate 5s ease-in-out forwards;
+}
+
+/*Animazione*/
+@keyframes animate
+{
+    0% {
+        transform: translateX(-50%) translateY(calc(-60vh - 100%));
+    }
+    25% {
+        transform: translateX(-50%) translateY(-100%);
+    }
+    50% {
+        transform: translateX(-50%) translateY(0);
+    }
+    75% {
+        transform: translateX(-50%) translateY(100%);
+    }
+    100% {
+        transform: translateX(-50%) translateY(calc(80vh - 100%));
+    }
+}
